@@ -103,7 +103,11 @@ try:
                 break
             else:
                 z = nums[len(nums) - 2]
-        res = f"{z} and {nums[len(nums) - choice([1, 3])]}"
+        a = nums[len(nums) - choice([1, 3])]
+        if z != a:
+            res = f"{z} and {a}"
+        else:
+            res = f"{z} and {nums[len(nums) - 4]}"
         result = f"\ntry {res}!"
         print(result)
     print("do you like which one?")
